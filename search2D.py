@@ -4,6 +4,6 @@ class Solution:
             if target in matrix[i]:
                 return True
 
-            return False
+        return False
 
         
