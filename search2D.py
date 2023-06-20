@@ -6,6 +6,6 @@ class Solution:
 
         return False
 
-#time complexity is O(mxn)
+#time complexity is O(n)
 
         
