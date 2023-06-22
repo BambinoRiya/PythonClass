@@ -1,4 +1,4 @@
-lass Solution:
+class Solution:
     def findTheWinner(self, n: int, k: int) -> int:
         friendList = [i for i in range(1,n+1)]
         counter = 0
