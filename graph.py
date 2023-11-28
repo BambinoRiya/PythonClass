@@ -78,18 +78,13 @@ def edge_list_to_adjacency_list(edge_list):
     adj_list = {}
 
     for edge in edge_list:
-        # Unpack the tuple
         u, v = edge
 
-        # If u is not in the adjacency list, add it with an empty list
         if u not in adj_list:
             adj_list[u] = []
 
-        # Add v to the list of u's neighbors
         adj_list[u].append(v)
 
-        # If v is not in the adjacency list, add it with an empty list
-        # This is necessary for vertices that have no outgoing edges
         if v not in adj_list:
             adj_list[v] = []
 
