@@ -10,7 +10,7 @@ class Employee:
 class Solution:
     def getImportance(self, employees: List['Employee'], id: int) -> int:
         hashmap = {employee.id:employee for employee in employees}
-        print(hashmap)
+        # print(hashmap)
 
         def dfs(e_id):
             employee = hashmap[e_id]
