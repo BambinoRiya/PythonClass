@@ -1,16 +1,20 @@
-class Solution(object):
-    def countPrimes(self, n):
-       
-        prime_numbers = 0
+from collections import Counter
+class Solution:
+    def countPrimes(self, n: int) -> int:
+        if n <2:
+            return 0
 
-        def isPrime(i):
-            for x in range(2,i):
-               if i%x == 0:
-                    return False
-            return True
-                
+        arr = [True] * (n)
+        arr[0] = False
+        arr[1] = False
+        
 
-        for z in range(2,n):
-            if isPrime(z):
-                prime_numbers +=1  
-        return prime_numbers   
+        for i in range(2,int((n)**0.5)+1):
+            if arr[i] == True:
+                for j in range(i**2, n,i):
+                    arr[j] = False
+
+        count = Counter(arr)
+        
+        return count[True]
+        
